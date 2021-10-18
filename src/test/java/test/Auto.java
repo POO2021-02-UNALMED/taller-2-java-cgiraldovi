@@ -14,27 +14,25 @@ public class Auto {
          return asientos.length;
     }
 
-    public String verificarintegridad(){
+    public String verificarIntegridad(){
         int cont = 0;
+        int contAsientos = 0;
         for (Asiento asiento: asientos) {
 
             if(asiento != null){
+                contAsientos ++;
                 if(asiento.registro == registro && registro == motor.registro){
                     cont ++;
                 }
             }
         }
 
-        if(cont == asientos.length){
-            return "Las piezas no son originales";
-        } else {
+        if(cont == contAsientos){
             return "Auto original";
+        } else {
+            return "Las piezas no son originales";
         }
-
-
-
     }
-
-
 }
+
 
