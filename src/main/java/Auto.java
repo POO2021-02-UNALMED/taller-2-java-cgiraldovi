@@ -17,8 +17,11 @@ public class Auto {
     public String verificarintegridad(){
         int cont = 0;
         for (Asiento asiento: asientos) {
-            if(asiento.registro == registro && registro == motor.registro){
-                cont ++;
+
+            if(asiento != null){
+                if(asiento.registro == registro && registro == motor.registro){
+                    cont ++;
+                }
             }
         }
 
@@ -34,3 +37,4 @@ public class Auto {
 
 
 }
+
